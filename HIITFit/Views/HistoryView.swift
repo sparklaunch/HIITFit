@@ -67,6 +67,8 @@ struct HistoryView: View {
             } label: {
                 Image(systemName: "xmark.circle")
             }
+            .font(.title)
+            .padding(.trailing)
         }
     }
 }
