@@ -44,11 +44,20 @@ struct WelcomeView: View {
                             .font(.headline)
                     }
                     Image("step-up")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 240, height: 240)
+                        .resizedToFill(width: 240, height: 240)
                         .clipShape(Circle())
                 }
+                Button {
+
+                } label: {
+                    Text("Get Started")
+                    Image(systemName: "arrow.right.circle")
+                }
+                .font(.title2)
+                .padding()
+                .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.gray, lineWidth: 2))
             }
             VStack {
                 HeaderView(titleText: "Welcome")
