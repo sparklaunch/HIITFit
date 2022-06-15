@@ -36,13 +36,18 @@ struct WelcomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                HStack {
+                HStack(alignment: .bottom) {
                     VStack(alignment: .leading) {
                         Text("Get fit")
                             .font(.largeTitle)
                         Text("with high intensity interval training")
                             .font(.headline)
                     }
+                    Image("step-up")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 240, height: 240)
+                        .clipShape(Circle())
                 }
             }
             VStack {
