@@ -38,7 +38,7 @@ struct WelcomeView: View {
             VStack {
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading) {
-                        Text("Get fit")
+                        Text(NSLocalizedString("Get Fit", comment: "invitation to exercise"))
                             .font(.largeTitle)
                         Text("with high intensity interval training")
                             .font(.headline)
@@ -50,7 +50,7 @@ struct WelcomeView: View {
                 Button {
 
                 } label: {
-                    Text("Get Started")
+                    Text(NSLocalizedString("Get Started", comment: "invitation"))
                     Image(systemName: "arrow.right.circle")
                 }
                 .font(.title2)
@@ -60,9 +60,9 @@ struct WelcomeView: View {
                     .stroke(Color.gray, lineWidth: 2))
             }
             VStack {
-                HeaderView(titleText: "Welcome")
+                HeaderView(titleText: NSLocalizedString("Welcome", comment: "greeting"))
                 Spacer()
-                Button("History") {
+                Button(NSLocalizedString("History", comment: "view user activity")) {
 
                 }
                 .padding(.bottom)
