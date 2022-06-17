@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "step-up.png",
       "idiom" : "universal",
+      "filename" : "step-up.png",
       "scale" : "1x"
     },
     {
@@ -30,8 +30,8 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   },
   "properties" : {
     "localizable" : true
