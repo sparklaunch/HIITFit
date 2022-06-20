@@ -72,7 +72,7 @@ struct ExerciseView: View {
                     }
                 }
                 .sheet(isPresented: $showSuccess, content: {
-                    SuccessView()
+                    SuccessView(selectedTab: $selectedTab)
                 })
                 .font(.title3)
                 .padding()
