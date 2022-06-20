@@ -35,6 +35,9 @@ import AVKit
 
 struct ExerciseView: View {
     @Binding var selectedTab: Int
+    var lastExercise: Bool {
+        index + 1 == Exercise.exercises.count
+    }
     let index: Int
     let interval: TimeInterval = 30
     var body: some View {
@@ -51,8 +54,15 @@ struct ExerciseView: View {
                 }
                 Text(Date().addingTimeInterval(interval), style: .timer)
                     .font(.system(size: 90))
-                Button(NSLocalizedString("Start/Done", comment: "begin exercise / mark as finished")) {
+                HStack(spacing: 150) {
+                    Button("Start Exercise") {
 
+                    }
+                    Button("Done") {
+                        withAnimation {
+                            selectedTab = lastExercise ? 9 : selectedTab + 1
+                        }
+                    }
                 }
                 .font(.title3)
                 .padding()
