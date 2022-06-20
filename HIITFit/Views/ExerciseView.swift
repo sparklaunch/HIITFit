@@ -34,6 +34,7 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
+    @State private var showHistory = false
     @State private var rating = 0
     @Binding var selectedTab: Int
     var lastExercise: Bool {
@@ -71,8 +72,13 @@ struct ExerciseView: View {
                     .padding()
                 Spacer()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
-
+                    withAnimation {
+                        showHistory.toggle()
+                    }
                 }
+                .sheet(isPresented: $showHistory, content: {
+                    HistoryView(showHistory: $showHistory)
+                })
                 .padding(.bottom)
             }
         }
