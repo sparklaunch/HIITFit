@@ -63,7 +63,7 @@ struct WelcomeView: View {
                     .stroke(Color.gray, lineWidth: 2))
             }
             VStack {
-                HeaderView(titleText: NSLocalizedString("Welcome", comment: "greeting"))
+                HeaderView(selectedTab: $selectedTab, titleText: NSLocalizedString("Welcome", comment: "greeting"))
                 Spacer()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
 
