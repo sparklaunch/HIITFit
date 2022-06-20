@@ -34,6 +34,7 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
+    @State private var rating = 0
     @Binding var selectedTab: Int
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
@@ -66,7 +67,7 @@ struct ExerciseView: View {
                 }
                 .font(.title3)
                 .padding()
-                RatingView()
+                RatingView(rating: $rating)
                     .padding()
                 Spacer()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
