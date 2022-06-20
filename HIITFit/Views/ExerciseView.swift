@@ -36,6 +36,7 @@ import AVKit
 struct ExerciseView: View {
     @State private var showHistory = false
     @State private var rating = 0
+    @State private var showSuccess = false
     @Binding var selectedTab: Int
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
@@ -62,10 +63,17 @@ struct ExerciseView: View {
                     }
                     Button("Done") {
                         withAnimation {
-                            selectedTab = lastExercise ? 9 : selectedTab + 1
+                            if lastExercise {
+                                showSuccess.toggle()
+                            } else {
+                                selectedTab += 1
+                            }
                         }
                     }
                 }
+                .sheet(isPresented: $showSuccess, content: {
+                    SuccessView()
+                })
                 .font(.title3)
                 .padding()
                 RatingView(rating: $rating)
