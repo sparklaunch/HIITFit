@@ -21,6 +21,7 @@
 		906ADFCC285BFA180033FD02 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 906ADFCE285BFA180033FD02 /* squat.mp4 */; };
 		906ADFCF285BFA1D0033FD02 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 906ADFD1285BFA1D0033FD02 /* step-up.mp4 */; };
 		906ADFD2285BFA220033FD02 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 906ADFD4285BFA220033FD02 /* sun-salute.mp4 */; };
+		906ADFD6286143D00033FD02 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906ADFD5286143D00033FD02 /* TimerView.swift */; };
 		CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C923251474DC0049DB93 /* HIITFitApp.swift */; };
 		CD30C926251474DC0049DB93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C925251474DC0049DB93 /* ContentView.swift */; };
 		CD30C928251474DD0049DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD30C927251474DD0049DB93 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		906ADFCD285BFA180033FD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/squat.mp4; sourceTree = "<group>"; };
 		906ADFD0285BFA1D0033FD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/step-up.mp4"; sourceTree = "<group>"; };
 		906ADFD3285BFA220033FD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/sun-salute.mp4"; sourceTree = "<group>"; };
+		906ADFD5286143D00033FD02 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		CD30C920251474DC0049DB93 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD30C923251474DC0049DB93 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		CD30C925251474DC0049DB93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				906ADFAF28580BAD0033FD02 /* WelcomeView.swift */,
 				906ADFBA285AA9010033FD02 /* SuccessView.swift */,
 				906ADFB128580BBA0033FD02 /* ExerciseView.swift */,
+				906ADFD5286143D00033FD02 /* TimerView.swift */,
 				906ADFB8285AA0660033FD02 /* HistoryView.swift */,
 				906ADFB6285A9EF30033FD02 /* RatingView.swift */,
 				906ADFB42859BF3C0033FD02 /* HeaderView.swift */,
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906ADFD6286143D00033FD02 /* TimerView.swift in Sources */,
 				906ADFC2285BEC990033FD02 /* HistoryStoreDevelopmentData.swift in Sources */,
 				906ADFB228580BBA0033FD02 /* ExerciseView.swift in Sources */,
 				906ADFB028580BAD0033FD02 /* WelcomeView.swift in Sources */,
