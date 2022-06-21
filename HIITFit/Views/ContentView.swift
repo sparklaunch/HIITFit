@@ -44,6 +44,7 @@ struct ContentView: View {
             }
             Text("Exercise 2")
         }
+        .environmentObject(HistoryStore())
         .tabViewStyle(.page(indexDisplayMode: .never))
         .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
