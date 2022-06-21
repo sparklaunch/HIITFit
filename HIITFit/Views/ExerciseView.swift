@@ -56,9 +56,6 @@ struct ExerciseView: View {
                     Text("Couldn't find \(Exercise.exercises[index].videoName).mp4")
                         .foregroundColor(.red)
                 }
-                if showTimer {
-                    TimerView(timerDone: $timerDone)
-                }
                 HStack(spacing: 150) {
                     Button("Start Exercise") {
                         withAnimation {
@@ -84,9 +81,12 @@ struct ExerciseView: View {
                 })
                 .font(.title3)
                 .padding()
+                if showTimer {
+                    TimerView(timerDone: $timerDone)
+                }
+                Spacer()
                 RatingView(rating: $rating)
                     .padding()
-                Spacer()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
                     withAnimation {
                         showHistory = true
