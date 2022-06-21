@@ -62,18 +62,22 @@ struct ExerciseView: View {
                 HStack(spacing: 150) {
                     Button("Start Exercise") {
                         withAnimation {
-                            showTimer.toggle()
+                            showTimer = true
+                            timerDone = false
                         }
                     }
                     Button("Done") {
+                        timerDone = false
+                        showTimer = false
                         withAnimation {
                             if lastExercise {
-                                showSuccess.toggle()
+                                showSuccess = true
                             } else {
                                 selectedTab += 1
                             }
                         }
                     }
+                    .disabled(!timerDone)
                 }
                 .sheet(isPresented: $showSuccess, content: {
                     SuccessView(selectedTab: $selectedTab)
@@ -85,7 +89,7 @@ struct ExerciseView: View {
                 Spacer()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
                     withAnimation {
-                        showHistory.toggle()
+                        showHistory = true
                     }
                 }
                 .sheet(isPresented: $showHistory, content: {
@@ -99,6 +103,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), index: 0)
+        ExerciseView(selectedTab: .constant(3), index: 3)
     }
 }
