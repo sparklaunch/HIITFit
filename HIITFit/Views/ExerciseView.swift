@@ -36,7 +36,6 @@ import AVKit
 struct ExerciseView: View {
     @EnvironmentObject var history: HistoryStore
     @State private var showHistory = false
-    @State private var rating = 0
     @State private var showSuccess = false
     @Binding var selectedTab: Int
     var lastExercise: Bool {
@@ -87,7 +86,7 @@ struct ExerciseView: View {
                     TimerView(timerDone: $timerDone)
                 }
                 Spacer()
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
                 Button(NSLocalizedString("History", comment: "view user activity")) {
                     withAnimation {
