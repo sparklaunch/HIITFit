@@ -40,6 +40,7 @@ struct HIITFitApp: App {
                 .onAppear {
                     print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
                 }
+                .environmentObject(HistoryStore())
         }
     }
 }
