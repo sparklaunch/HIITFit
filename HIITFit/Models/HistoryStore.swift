@@ -32,6 +32,12 @@
 
 import Foundation
 
+enum FileError: Error {
+    case loadFailure
+    case saveFailure
+    case urlFailure
+}
+
 struct ExerciseDay: Identifiable {
     let id = UUID()
     let date: Date
@@ -40,11 +46,17 @@ struct ExerciseDay: Identifiable {
 
 class HistoryStore: ObservableObject {
     @Published var exerciseDays: [ExerciseDay] = []
-    init() {
+    init(withChecking: Bool) throws {
 //        #if DEBUG
 //        createDevelopmentData()
 //        #endif
+        do {
+            try load()
+        } catch {
+            throw error
+        }
     }
+    init() {}
     func addDoneExercise(_ exerciseName: String) {
         let today = Date()
         if let firstDate = exerciseDays.first?.date, today.isSameDay(as: firstDate) {
@@ -53,5 +65,8 @@ class HistoryStore: ObservableObject {
         } else {
             exerciseDays.insert(.init(date: today, exercises: [exerciseName]), at: .zero)
         }
+    }
+    func load() throws {
+        throw FileError.loadFailure
     }
 }

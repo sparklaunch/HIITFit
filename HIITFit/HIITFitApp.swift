@@ -34,13 +34,24 @@ import SwiftUI
 
 @main
 struct HIITFitApp: App {
+    @StateObject private var historyStore: HistoryStore
+    init() {
+        let historyStore: HistoryStore
+        do {
+            historyStore = try HistoryStore(withChecking: true)
+        } catch {
+            print("Could not load history data")
+            historyStore = HistoryStore()
+        }
+        _historyStore = StateObject(wrappedValue: historyStore)
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onAppear {
                     print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
                 }
-                .environmentObject(HistoryStore())
+                .environmentObject(historyStore)
         }
     }
 }
