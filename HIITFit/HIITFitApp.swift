@@ -35,6 +35,7 @@ import SwiftUI
 @main
 struct HIITFitApp: App {
     @StateObject private var historyStore: HistoryStore
+    @State private var showAlert = false
     init() {
         let historyStore: HistoryStore
         do {
@@ -42,16 +43,30 @@ struct HIITFitApp: App {
         } catch {
             print("Could not load history data")
             historyStore = HistoryStore()
+            showAlert = true
         }
         _historyStore = StateObject(wrappedValue: historyStore)
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear {
-                    print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-                }
-                .environmentObject(historyStore)
+            if #available(iOS 15.0, *) {
+                ContentView()
+                    .onAppear {
+                        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+                    }
+                    .environmentObject(historyStore)
+                    .alert("History", isPresented: $showAlert) {
+                        
+                    } message: {
+                        Text("""
+    Unfortunately we can't load your past history.
+    Email support:
+    support@xyz.com
+    """)
+                    }
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }

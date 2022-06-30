@@ -67,6 +67,6 @@ class HistoryStore: ObservableObject {
         }
     }
     func load() throws {
-        throw FileError.loadFailure
+//        throw FileError.loadFailure
     }
 }
