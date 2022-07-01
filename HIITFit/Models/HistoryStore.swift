@@ -57,6 +57,12 @@ class HistoryStore: ObservableObject {
         }
     }
     init() {}
+    func getURL() -> URL? {
+        guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        return documentsURL.appendingPathComponent("history.plist")
+    }
     func addDoneExercise(_ exerciseName: String) {
         let today = Date()
         if let firstDate = exerciseDays.first?.date, today.isSameDay(as: firstDate) {
@@ -65,8 +71,31 @@ class HistoryStore: ObservableObject {
         } else {
             exerciseDays.insert(.init(date: today, exercises: [exerciseName]), at: .zero)
         }
+        do {
+            try save()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
     }
     func load() throws {
 //        throw FileError.loadFailure
+    }
+    func save() throws {
+        guard let dataURL = getURL() else {
+            throw FileError.urlFailure
+        }
+        let plistData = exerciseDays.map {
+            [
+                $0.id.uuidString,
+                $0.date,
+                $0.exercises
+            ]
+        }
+        do {
+            let data = try PropertyListSerialization.data(fromPropertyList: plistData, format: .binary, options: .zero)
+            try data.write(to: dataURL, options: .atomic)
+        } catch {
+            throw FileError.saveFailure
+        }
     }
 }
