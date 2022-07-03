@@ -32,6 +32,11 @@
 
 import SwiftUI
 
+enum EmbossedButtonShape {
+    case round
+    case capsule
+}
+
 struct EmbossedButton: View {
     let buttonText: String
     let action: () -> Void
@@ -45,17 +50,31 @@ struct EmbossedButton: View {
 }
 
 struct EmbossedButtonStyle: ButtonStyle {
+    var buttonShape = EmbossedButtonShape.capsule
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(10)
             .background(
+                GeometryReader { geometry in
+                    shape(size: geometry.size)
+                    .foregroundColor(Color("Background"))
+                    .shadow(color: Color("DropShadow"), radius: 1, x: 2, y: 2)
+                    .shadow(color: Color("DropHighlight"), radius: 1, x: -2, y: -2)
+                .offset(x: -1, y: -1)
+                }
+            )
+    }
+    @ViewBuilder func shape(size: CGSize) -> some View {
+        switch buttonShape {
+        case .round:
+            Circle()
+                .stroke(Color("Background"), lineWidth: 2)
+                .frame(width: max(size.width, size.height), height: max(size.width, size.height))
+                .offset(x: -1, y: -max(size.width, size.height) / 2 + min(size.width, size.height) / 2)
+        case .capsule:
             Capsule()
                 .stroke(Color("Background"), lineWidth: 2)
-                .foregroundColor(Color("Background"))
-                .shadow(color: Color("DropShadow"), radius: 1, x: 2, y: 2)
-                .shadow(color: Color("DropHighlight"), radius: 1, x: -2, y: -2)
-                .offset(x: -1, y: -1)
-            )
+        }
     }
 }
 
@@ -68,7 +87,7 @@ struct EmbossedButton_Previews: PreviewProvider {
                 Text("History")
                     .bold()
             }
-            .buttonStyle(EmbossedButtonStyle())
+            .buttonStyle(EmbossedButtonStyle(buttonShape: .round))
             .padding(40)
         .previewLayout(.sizeThatFits)
             Button {

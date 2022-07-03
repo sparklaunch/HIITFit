@@ -51,6 +51,19 @@ struct ExerciseView: View {
             }
         }
     }
+    var historyButton: some View {
+        Button {
+            withAnimation {
+                showHistory = true
+            }
+        } label: {
+            Text("History")
+                .bold()
+                .padding([.leading, .trailing], 5)
+        }
+        .padding(.bottom, 10)
+        .buttonStyle(EmbossedButtonStyle())
+    }
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -90,15 +103,11 @@ struct ExerciseView: View {
                 Spacer()
                 RatingView(exerciseIndex: index)
                     .padding()
-                Button(NSLocalizedString("History", comment: "view user activity")) {
-                    withAnimation {
-                        showHistory = true
-                    }
-                }
-                .sheet(isPresented: $showHistory, content: {
-                    HistoryView(showHistory: $showHistory)
-                })
-                .padding(.bottom)
+                historyButton
+                    .sheet(isPresented: $showHistory, content: {
+                        HistoryView(showHistory: $showHistory)
+                    })
+                    .padding(.bottom)
             }
         }
     }

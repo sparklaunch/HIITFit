@@ -35,6 +35,19 @@ import SwiftUI
 struct WelcomeView: View {
     @State private var showHistory = false
     @Binding var selectedTab: Int
+    var historyButton: some View {
+        Button {
+            withAnimation {
+                showHistory = true
+            }
+        } label: {
+            Text("History")
+                .bold()
+                .padding([.leading, .trailing], 5)
+        }
+        .padding(.bottom, 10)
+        .buttonStyle(EmbossedButtonStyle())
+    }
     var getStartedButton: some View {
         RaisedButton(buttonText: "Get Started") {
             withAnimation {
@@ -62,15 +75,11 @@ struct WelcomeView: View {
             VStack {
                 HeaderView(selectedTab: $selectedTab, titleText: NSLocalizedString("Welcome", comment: "greeting"))
                 Spacer()
-                Button(NSLocalizedString("History", comment: "view user activity")) {
-                    withAnimation {
-                        showHistory.toggle()
-                    }
-                }
-                .sheet(isPresented: $showHistory, content: {
-                    HistoryView(showHistory: $showHistory)
-                })
-                .padding(.bottom)
+                historyButton
+                    .sheet(isPresented: $showHistory, content: {
+                        HistoryView(showHistory: $showHistory)
+                    })
+                    .padding(.bottom)
             }
         }
     }
