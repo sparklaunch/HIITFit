@@ -32,54 +32,41 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
-    @State private var showHistory = false
-    @Binding var selectedTab: Int
-    var historyButton: some View {
-        Button {
-            withAnimation {
-                showHistory = true
-            }
-        } label: {
-            Text("History")
-                .bold()
-                .padding([.leading, .trailing], 5)
-        }
-        .padding(.bottom, 10)
-        .buttonStyle(EmbossedButtonStyle())
-    }
-    var getStartedButton: some View {
-        RaisedButton(buttonText: "Get Started") {
-            withAnimation {
-                selectedTab = 0
-            }
-        }
-        .padding()
+struct ContainerView<Content: View>: View {
+    var content: Content
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
     }
     var body: some View {
-        GeometryReader { geometry in
+        ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                .foregroundColor(Color("Background"))
             VStack {
-                HeaderView(selectedTab: $selectedTab, titleText: "Welcome")
                 Spacer()
-                VStack {
-                    Image("StepUp")
-                    Text("Stay fit with dynamic exercises!!")
-                    getStartedButton
-                    Spacer()
-                    historyButton
-                }
+                Rectangle()
+                    .frame(height: 25)
+                    .foregroundColor(Color("Background"))
             }
-            .sheet(isPresented: $showHistory) {
-                withAnimation {
-                    HistoryView(showHistory: $showHistory)
-                }
-            }
+            content
         }
     }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
+struct ContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(selectedTab: .constant(9))
+        ContainerView {
+            VStack {
+                RaisedButton(buttonText: "Hello World!!") {
+
+                }
+                .padding(50)
+                Button("Tap me!!") {
+
+                }
+                .buttonStyle(EmbossedButtonStyle(buttonShape: .round))
+            }
+        }
+        .padding(50)
+        .previewLayout(.sizeThatFits)
     }
 }
