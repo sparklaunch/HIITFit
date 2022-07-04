@@ -61,13 +61,16 @@ struct WelcomeView: View {
             VStack {
                 HeaderView(selectedTab: $selectedTab, titleText: "Welcome")
                 Spacer()
-                VStack {
-                    Image("StepUp")
-                    Text("Stay fit with dynamic exercises!!")
-                    getStartedButton
-                    Spacer()
-                    historyButton
+                ContainerView {
+                    VStack {
+                        Image("StepUp")
+                        Text("Stay fit with dynamic exercises!!")
+                        getStartedButton
+                        Spacer()
+                        historyButton
+                    }
                 }
+                .frame(height: geometry.size.height * 0.8)
             }
             .sheet(isPresented: $showHistory) {
                 withAnimation {

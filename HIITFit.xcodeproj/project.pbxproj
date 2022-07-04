@@ -25,6 +25,7 @@
 		906ADFD8287252860033FD02 /* RaisedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906ADFD7287252860033FD02 /* RaisedButton.swift */; };
 		90AD8FE328725AB30048FFA5 /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AD8FE228725AB30048FFA5 /* EmbossedButton.swift */; };
 		90AD8FE5287265500048FFA5 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AD8FE4287265500048FFA5 /* ContainerView.swift */; };
+		90AD8FE728726B1E0048FFA5 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AD8FE628726B1E0048FFA5 /* GradientBackground.swift */; };
 		CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C923251474DC0049DB93 /* HIITFitApp.swift */; };
 		CD30C926251474DC0049DB93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C925251474DC0049DB93 /* ContentView.swift */; };
 		CD30C928251474DD0049DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD30C927251474DD0049DB93 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		906ADFD7287252860033FD02 /* RaisedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButton.swift; sourceTree = "<group>"; };
 		90AD8FE228725AB30048FFA5 /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
 		90AD8FE4287265500048FFA5 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		90AD8FE628726B1E0048FFA5 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		CD30C920251474DC0049DB93 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD30C923251474DC0049DB93 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		CD30C925251474DC0049DB93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				CD30C925251474DC0049DB93 /* ContentView.swift */,
+				90AD8FE628726B1E0048FFA5 /* GradientBackground.swift */,
 				906ADFAF28580BAD0033FD02 /* WelcomeView.swift */,
 				906ADFBA285AA9010033FD02 /* SuccessView.swift */,
 				906ADFB128580BBA0033FD02 /* ExerciseView.swift */,
@@ -269,6 +272,7 @@
 				90AD8FE328725AB30048FFA5 /* EmbossedButton.swift in Sources */,
 				906ADFB9285AA0660033FD02 /* HistoryView.swift in Sources */,
 				906ADFB52859BF3C0033FD02 /* HeaderView.swift in Sources */,
+				90AD8FE728726B1E0048FFA5 /* GradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
