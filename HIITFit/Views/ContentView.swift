@@ -47,7 +47,8 @@ struct ContentView: View {
                 Text("Exercise 2")
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .padding(.top, 44)
         }
     }
 }

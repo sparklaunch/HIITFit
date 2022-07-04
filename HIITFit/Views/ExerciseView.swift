@@ -69,45 +69,50 @@ struct ExerciseView: View {
             VStack {
                 HeaderView(selectedTab: $selectedTab, titleText: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
-                if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
-                    VideoPlayer(player: AVPlayer(url: url))
-                        .frame(height: geometry.size.height * 0.45)
-                } else {
-                    Text("Couldn't find \(Exercise.exercises[index].videoName).mp4")
-                        .foregroundColor(.red)
-                }
-                HStack(spacing: 150) {
-                    startExerciseButton
-                    Button("Done") {
-                        timerDone = false
-                        showTimer = false
-                        withAnimation {
-                            if lastExercise {
-                                showSuccess = true
-                            } else {
-                                selectedTab += 1
-                            }
+                ContainerView(withPadding: 16) {
+                    VStack(spacing: .zero) {
+                        if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
+                            VideoPlayer(player: AVPlayer(url: url))
+                                .frame(height: geometry.size.height * 0.45)
+                                .cornerRadius(15)
+                        } else {
+                            Text("Couldn't find \(Exercise.exercises[index].videoName).mp4")
+                                .foregroundColor(.red)
                         }
-                        history.addDoneExercise(Exercise.exercises[index].exerciseName)
+                        HStack(spacing: 150) {
+                            startExerciseButton
+                            Button("Done") {
+                                timerDone = false
+                                showTimer = false
+                                withAnimation {
+                                    if lastExercise {
+                                        showSuccess = true
+                                    } else {
+                                        selectedTab += 1
+                                    }
+                                }
+                                history.addDoneExercise(Exercise.exercises[index].exerciseName)
+                            }
+                            .disabled(!timerDone)
+                        }
+                        .sheet(isPresented: $showSuccess, content: {
+                            SuccessView(selectedTab: $selectedTab)
+                        })
+                        .font(.title3)
+                        .padding()
+                        if showTimer {
+                            TimerView(timerDone: $timerDone)
+                        }
+                        Spacer()
+                        RatingView(exerciseIndex: index)
+                            .padding()
+                        historyButton
+                            .sheet(isPresented: $showHistory, content: {
+                                HistoryView(showHistory: $showHistory)
+                            })
+                            .padding(.bottom)
                     }
-                    .disabled(!timerDone)
                 }
-                .sheet(isPresented: $showSuccess, content: {
-                    SuccessView(selectedTab: $selectedTab)
-                })
-                .font(.title3)
-                .padding()
-                if showTimer {
-                    TimerView(timerDone: $timerDone)
-                }
-                Spacer()
-                RatingView(exerciseIndex: index)
-                    .padding()
-                historyButton
-                    .sheet(isPresented: $showHistory, content: {
-                        HistoryView(showHistory: $showHistory)
-                    })
-                    .padding(.bottom)
             }
         }
     }

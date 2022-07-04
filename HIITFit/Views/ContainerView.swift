@@ -34,8 +34,13 @@ import SwiftUI
 
 struct ContainerView<Content: View>: View {
     var content: Content
+    var padding: Double = .zero
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
+    }
+    init(withPadding: Double, @ViewBuilder content: () -> Content) {
+        self.init(content: content)
+        self.padding = withPadding
     }
     var body: some View {
         ZStack {
@@ -48,6 +53,7 @@ struct ContainerView<Content: View>: View {
                     .foregroundColor(Color("Background"))
             }
             content
+                .padding(padding)
         }
     }
 }

@@ -35,14 +35,26 @@ import SwiftUI
 struct HeaderView: View {
     @Binding var selectedTab: Int
     let titleText: String
+    func circle(isActive: Bool = false) -> some View {
+        ZStack {
+            if isActive {
+                Circle()
+                    .fill(.white.opacity(0.5))
+                    .frame(width: 32, height: 32)
+            }
+            Circle()
+                .fill(.white)
+                .frame(width: 16, height: 16)
+        }
+    }
     var body: some View {
         VStack {
             Text(titleText)
-                .font(.largeTitle)
-            HStack {
+                .font(.largeTitle.bold())
+                .foregroundColor(.white)
+            HStack(spacing: 20) {
                 ForEach(0..<Exercise.exercises.count) { index in
-                    let fill = index == selectedTab ? ".fill" : ""
-                    Image(systemName: "\(index + 1).circle\(fill)")
+                    circle(isActive: index == selectedTab)
                         .onTapGesture {
                             withAnimation {
                                 selectedTab = index
