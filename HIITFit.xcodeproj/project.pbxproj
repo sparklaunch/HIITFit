@@ -18,6 +18,7 @@
 		3D6F9621296539EE00FEFBF8 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */; };
 		3D6F962329653E8E00FEFBF8 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F962229653E8E00FEFBF8 /* SuccessView.swift */; };
 		3D6F962529655E0300FEFBF8 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F962429655E0300FEFBF8 /* Exercise.swift */; };
+		3D6F96282965617500FEFBF8 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F96272965617500FEFBF8 /* HistoryStore.swift */; };
 		9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB122964AEB00006C850 /* HIITFitApp.swift */; };
 		9036BB152964AEB00006C850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB142964AEB00006C850 /* ContentView.swift */; };
 		9036BB172964AEB10006C850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB162964AEB10006C850 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		3D6F962229653E8E00FEFBF8 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		3D6F962429655E0300FEFBF8 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		3D6F96272965617500FEFBF8 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 		9036BB0F2964AEB00006C850 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9036BB122964AEB00006C850 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		9036BB142964AEB00006C850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,9 +77,17 @@
 			children = (
 				3D6F961D2965264800FEFBF8 /* DateExtension.swift */,
 				3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */,
-				3D6F962429655E0300FEFBF8 /* Exercise.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3D6F96262965615C00FEFBF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D6F962429655E0300FEFBF8 /* Exercise.swift */,
+				3D6F96272965617500FEFBF8 /* HistoryStore.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9036BB062964AEB00006C850 = {
@@ -99,6 +109,7 @@
 		9036BB112964AEB00006C850 /* HIITFit */ = {
 			isa = PBXGroup;
 			children = (
+				3D6F96262965615C00FEFBF8 /* Models */,
 				3D6F961F2965275500FEFBF8 /* Utils */,
 				3D6F96102964FD6800FEFBF8 /* Videos */,
 				9036BB122964AEB00006C850 /* HIITFitApp.swift */,
@@ -210,6 +221,7 @@
 				3D6F961E2965264800FEFBF8 /* DateExtension.swift in Sources */,
 				3D6F962329653E8E00FEFBF8 /* SuccessView.swift in Sources */,
 				3D6F960F2964F8F500FEFBF8 /* HeaderView.swift in Sources */,
+				3D6F96282965617500FEFBF8 /* HistoryStore.swift in Sources */,
 				9036BB242964B8540006C850 /* ExerciseView.swift in Sources */,
 				9036BB152964AEB00006C850 /* ContentView.swift in Sources */,
 				3D6F962529655E0300FEFBF8 /* Exercise.swift in Sources */,
