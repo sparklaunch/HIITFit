@@ -15,6 +15,7 @@
 		3D6F961A2965042E00FEFBF8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F96192965042E00FEFBF8 /* RatingView.swift */; };
 		3D6F961C2965243100FEFBF8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F961B2965243100FEFBF8 /* HistoryView.swift */; };
 		3D6F961E2965264800FEFBF8 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F961D2965264800FEFBF8 /* DateExtension.swift */; };
+		3D6F9621296539EE00FEFBF8 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */; };
 		9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB122964AEB00006C850 /* HIITFitApp.swift */; };
 		9036BB152964AEB00006C850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB142964AEB00006C850 /* ContentView.swift */; };
 		9036BB172964AEB10006C850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB162964AEB10006C850 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		3D6F96192965042E00FEFBF8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3D6F961B2965243100FEFBF8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		3D6F961D2965264800FEFBF8 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		9036BB0F2964AEB00006C850 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9036BB122964AEB00006C850 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		9036BB142964AEB00006C850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				3D6F961D2965264800FEFBF8 /* DateExtension.swift */,
+				3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				9036BB152964AEB00006C850 /* ContentView.swift in Sources */,
 				3D6F961A2965042E00FEFBF8 /* RatingView.swift in Sources */,
 				9036BB222964B84B0006C850 /* WelcomeView.swift in Sources */,
+				3D6F9621296539EE00FEFBF8 /* ImageExtension.swift in Sources */,
 				9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
