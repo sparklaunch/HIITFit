@@ -10,19 +10,17 @@ import AVKit
 
 struct ExerciseView: View {
     let index: Int
-    let videoNames = ["Squat", "StepUp", "Burpee", "SunSalute"]
-    let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
     let interval: TimeInterval = 30
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(titleText: exerciseNames[index])
+                HeaderView(titleText: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
-                if let url = Bundle.main.url(forResource: videoNames[index], withExtension: "mp4") {
+                if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
                     VideoPlayer(player: .init(url: url))
                         .frame(height: geometry.size.height * 0.45)
                 } else {
-                    Text("Couldn't find \(videoNames[index]).mp4.")
+                    Text("Couldn't find \(Exercise.exercises[index].videoName).mp4.")
                         .foregroundColor(.red)
                 }
                 Text(Date().addingTimeInterval(interval), style: .timer)
