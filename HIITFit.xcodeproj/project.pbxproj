@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D6F960F2964F8F500FEFBF8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F960E2964F8F500FEFBF8 /* HeaderView.swift */; };
 		9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB122964AEB00006C850 /* HIITFitApp.swift */; };
 		9036BB152964AEB00006C850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB142964AEB00006C850 /* ContentView.swift */; };
 		9036BB172964AEB10006C850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB162964AEB10006C850 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D6F960E2964F8F500FEFBF8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9036BB0F2964AEB00006C850 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9036BB122964AEB00006C850 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		9036BB142964AEB00006C850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				9036BB142964AEB00006C850 /* ContentView.swift */,
 				9036BB212964B84B0006C850 /* WelcomeView.swift */,
 				9036BB232964B8540006C850 /* ExerciseView.swift */,
+				3D6F960E2964F8F500FEFBF8 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6F960F2964F8F500FEFBF8 /* HeaderView.swift in Sources */,
 				9036BB242964B8540006C850 /* ExerciseView.swift in Sources */,
 				9036BB152964AEB00006C850 /* ContentView.swift in Sources */,
 				9036BB222964B84B0006C850 /* WelcomeView.swift in Sources */,
