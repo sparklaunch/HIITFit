@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct HistoryView: View {
-    let today: Date = .init()
-    let yesterday: Date = .init().addingTimeInterval(-86400)
-    let exercises1 = ["Squat", "Step Up", "Burpee", "Sun Salute"]
-    let exercises2 = ["Squat", "Step Up", "Burpee"]
+    let historyStore: HistoryStore = .init()
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Button {
@@ -26,21 +23,15 @@ struct HistoryView: View {
                     .font(.title)
                     .padding()
                 Form {
-                    Section {
-                        ForEach(exercises1, id: \.self) { exercise in
-                            Text(exercise)
+                    ForEach(historyStore.exerciseDays) { exerciseDay in
+                        Section {
+                            ForEach(exerciseDay.exercises, id: \.self) { exercise in
+                                Text(exercise)
+                            }
+                        } header: {
+                            Text(exerciseDay.date.formatted(as: "MMM d"))
+                                .font(.headline)
                         }
-                    } header: {
-                        Text(today.formatted(as: "MMM d"))
-                            .font(.headline)
-                    }
-                    Section {
-                        ForEach(exercises2, id: \.self) { exercise in
-                            Text(exercise)
-                        }
-                    } header: {
-                        Text(yesterday.formatted(as: "MMM d"))
-                            .font(.headline)
                     }
                 }
             }
