@@ -13,18 +13,22 @@ struct ExerciseView: View {
     let videoNames = ["Squat", "StepUp", "Burpee", "SunSalute"]
     let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
     var body: some View {
-        VStack {
-            HeaderView(exerciseString: exerciseNames[index])
-            if let url = Bundle.main.url(forResource: videoNames[index], withExtension: "mp4") {
-                VideoPlayer(player: .init(url: url))
-            } else {
-                Text("Couldn't find \(videoNames[index]).mp4.")
-                    .foregroundColor(.red)
+        GeometryReader { geometry in
+            VStack {
+                HeaderView(exerciseString: exerciseNames[index])
+                    .padding(.bottom)
+                if let url = Bundle.main.url(forResource: videoNames[index], withExtension: "mp4") {
+                    VideoPlayer(player: .init(url: url))
+                        .frame(height: geometry.size.height * 0.45)
+                } else {
+                    Text("Couldn't find \(videoNames[index]).mp4.")
+                        .foregroundColor(.red)
+                }
+                Text("Timer")
+                Text("Start/Done button")
+                Text("Rating")
+                Text("History button")
             }
-            Text("Timer")
-            Text("Start/Done button")
-            Text("Rating")
-            Text("History button")
         }
     }
 }
