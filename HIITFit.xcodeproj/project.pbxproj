@@ -12,6 +12,9 @@
 		3D6F96162964FD7900FEFBF8 /* Squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F96122964FD7900FEFBF8 /* Squat.mp4 */; };
 		3D6F96172964FD7900FEFBF8 /* Burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F96132964FD7900FEFBF8 /* Burpee.mp4 */; };
 		3D6F96182964FD7900FEFBF8 /* SunSalute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F96142964FD7900FEFBF8 /* SunSalute.mp4 */; };
+		3D6F961A2965042E00FEFBF8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F96192965042E00FEFBF8 /* RatingView.swift */; };
+		3D6F961C2965243100FEFBF8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F961B2965243100FEFBF8 /* HistoryView.swift */; };
+		3D6F961E2965264800FEFBF8 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F961D2965264800FEFBF8 /* DateExtension.swift */; };
 		9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB122964AEB00006C850 /* HIITFitApp.swift */; };
 		9036BB152964AEB00006C850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB142964AEB00006C850 /* ContentView.swift */; };
 		9036BB172964AEB10006C850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB162964AEB10006C850 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 		3D6F96122964FD7900FEFBF8 /* Squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Squat.mp4; sourceTree = "<group>"; };
 		3D6F96132964FD7900FEFBF8 /* Burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Burpee.mp4; sourceTree = "<group>"; };
 		3D6F96142964FD7900FEFBF8 /* SunSalute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SunSalute.mp4; sourceTree = "<group>"; };
+		3D6F96192965042E00FEFBF8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		3D6F961B2965243100FEFBF8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		3D6F961D2965264800FEFBF8 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		9036BB0F2964AEB00006C850 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9036BB122964AEB00006C850 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		9036BB142964AEB00006C850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +64,14 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		3D6F961F2965275500FEFBF8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D6F961D2965264800FEFBF8 /* DateExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		9036BB062964AEB00006C850 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +91,7 @@
 		9036BB112964AEB00006C850 /* HIITFit */ = {
 			isa = PBXGroup;
 			children = (
+				3D6F961F2965275500FEFBF8 /* Utils */,
 				3D6F96102964FD6800FEFBF8 /* Videos */,
 				9036BB122964AEB00006C850 /* HIITFitApp.swift */,
 				9036BB252964B87C0006C850 /* Views */,
@@ -101,7 +116,9 @@
 				9036BB142964AEB00006C850 /* ContentView.swift */,
 				9036BB212964B84B0006C850 /* WelcomeView.swift */,
 				9036BB232964B8540006C850 /* ExerciseView.swift */,
+				3D6F96192965042E00FEFBF8 /* RatingView.swift */,
 				3D6F960E2964F8F500FEFBF8 /* HeaderView.swift */,
+				3D6F961B2965243100FEFBF8 /* HistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,9 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6F961C2965243100FEFBF8 /* HistoryView.swift in Sources */,
+				3D6F961E2965264800FEFBF8 /* DateExtension.swift in Sources */,
 				3D6F960F2964F8F500FEFBF8 /* HeaderView.swift in Sources */,
 				9036BB242964B8540006C850 /* ExerciseView.swift in Sources */,
 				9036BB152964AEB00006C850 /* ContentView.swift in Sources */,
+				3D6F961A2965042E00FEFBF8 /* RatingView.swift in Sources */,
 				9036BB222964B84B0006C850 /* WelcomeView.swift in Sources */,
 				9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */,
 			);
