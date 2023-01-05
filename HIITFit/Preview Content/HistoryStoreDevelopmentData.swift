@@ -8,6 +8,7 @@
 import Foundation
 
 extension HistoryStore {
+    /// Create some dummy date just for the sake of testing.
     func createDevelopmentData() {
         exerciseDays = [.init(date: .init().addingTimeInterval(-86400), exercises: [Exercise.exercises[0].exerciseName, Exercise.exercises[1].exerciseName, Exercise.exercises[2].exerciseName]), .init(date: .init().addingTimeInterval(TimeInterval(-86400 * 2)), exercises: [Exercise.exercises[1].exerciseName, Exercise.exercises[0].exerciseName])]
     }

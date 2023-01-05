@@ -20,6 +20,9 @@ class HistoryStore: ObservableObject {
         createDevelopmentData()
 #endif
     }
+    /// Add a finished exercise into the store.
+    ///   - parameters:
+    ///     - _: The name of the finished exercise.
     func addDoneExercise(_ exerciseName: String) {
         let today: Date = .init()
         if today.isSameDay(as: exerciseDays[0].date) {
