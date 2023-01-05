@@ -9,6 +9,8 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
+    @State private var showSuccess = false
+    @State private var showHistory = false
     @State private var rating = 0
     @Binding var selectedTab: Int
     var lastExercise: Bool {
@@ -37,9 +39,16 @@ struct ExerciseView: View {
                         Text("Start Exercise")
                     }
                     Button {
-                        selectedTab = lastExercise ? 9 : selectedTab + 1
+                        if lastExercise {
+                            showSuccess.toggle()
+                        } else {
+                            selectedTab += 1
+                        }
                     } label: {
                         Text("Done")
+                    }
+                    .sheet(isPresented: $showSuccess) {
+                        SuccessView(selectedTab: $selectedTab)
                     }
                 }
                 .font(.title3)
@@ -48,9 +57,12 @@ struct ExerciseView: View {
                     .padding()
                 Spacer()
                 Button(NSLocalizedString("History", comment: "View user activity")) {
-                    
+                    showHistory.toggle()
                 }
                 .padding(.bottom)
+                .sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }
             }
         }
     }
@@ -58,6 +70,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), index: .zero)
+        ExerciseView(selectedTab: .constant(3), index: 3)
     }
 }

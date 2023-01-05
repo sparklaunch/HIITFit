@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State private var showHistory = false
     @Binding var selectedTab: Int
     var body: some View {
         ZStack {
@@ -15,11 +16,14 @@ struct WelcomeView: View {
                 HeaderView(selectedTab: $selectedTab, titleText: NSLocalizedString("Welcome", comment: "Greeting"))
                 Spacer()
                 Button {
-                    
+                    showHistory.toggle()
                 } label: {
                     Text(NSLocalizedString("History", comment: "View user activity"))
                 }
                 .padding(.bottom)
+                .sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }
             }
             VStack {
                 HStack(alignment: .bottom) {

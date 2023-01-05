@@ -21,6 +21,7 @@
 		3D6F9634296686B500FEFBF8 /* Squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F9636296686B500FEFBF8 /* Squat.mp4 */; };
 		3D6F9637296686BB00FEFBF8 /* StepUp.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F9639296686BB00FEFBF8 /* StepUp.mp4 */; };
 		3D6F963A296686C000FEFBF8 /* SunSalute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F963C296686C000FEFBF8 /* SunSalute.mp4 */; };
+		3D6F963E2966A86C00FEFBF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F963D2966A86C00FEFBF8 /* TimerView.swift */; };
 		9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB122964AEB00006C850 /* HIITFitApp.swift */; };
 		9036BB152964AEB00006C850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB142964AEB00006C850 /* ContentView.swift */; };
 		9036BB172964AEB10006C850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB162964AEB10006C850 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		3D6F9635296686B500FEFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/Squat.mp4; sourceTree = "<group>"; };
 		3D6F9638296686BB00FEFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/StepUp.mp4; sourceTree = "<group>"; };
 		3D6F963B296686C000FEFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/SunSalute.mp4; sourceTree = "<group>"; };
+		3D6F963D2966A86C00FEFBF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9036BB0F2964AEB00006C850 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9036BB122964AEB00006C850 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		9036BB142964AEB00006C850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				3D6F960E2964F8F500FEFBF8 /* HeaderView.swift */,
 				3D6F961B2965243100FEFBF8 /* HistoryView.swift */,
 				3D6F962229653E8E00FEFBF8 /* SuccessView.swift */,
+				3D6F963D2966A86C00FEFBF8 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6F963E2966A86C00FEFBF8 /* TimerView.swift in Sources */,
 				3D6F962A296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift in Sources */,
 				3D6F961C2965243100FEFBF8 /* HistoryView.swift in Sources */,
 				3D6F961E2965264800FEFBF8 /* DateExtension.swift in Sources */,
@@ -340,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -394,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -427,7 +431,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -467,7 +471,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
