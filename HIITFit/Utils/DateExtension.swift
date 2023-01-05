@@ -16,4 +16,10 @@ extension Date {
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
+    /// Check whether a date is the same date or not.
+    ///   - parameters:
+    ///     - date: A date to which it's compared.
+    func isSameDay(as date: Date) -> Bool {
+        return self == date
+    }
 }
