@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct RatingView: View {
-    @Binding var rating: Int
+    let exerciseIndex: Int
+    @AppStorage("ratings") private var ratings = "0000"
+    @State private var rating = 0
     let maximumRating = 5
     let onColor: Color = .red
     let offColor: Color = .gray
@@ -27,8 +29,10 @@ struct RatingView: View {
 }
 
 struct RatingView_Previews: PreviewProvider {
+    @AppStorage("ratings") static var ratings: String?
     static var previews: some View {
-        RatingView(rating: .constant(3))
+        ratings = nil
+        return RatingView(exerciseIndex: .zero)
             .previewLayout(.sizeThatFits)
     }
 }

@@ -12,7 +12,6 @@ struct ExerciseView: View {
     @EnvironmentObject var historyStore: HistoryStore
     @State private var showSuccess = false
     @State private var showHistory = false
-    @AppStorage("rating") private var rating = 0
     @Binding var selectedTab: Int
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
@@ -61,7 +60,7 @@ struct ExerciseView: View {
                     TimerView(timerDone: $timerDone)
                 }
                 Spacer()
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
                 Button(NSLocalizedString("History", comment: "View user activity")) {
                     showHistory.toggle()
