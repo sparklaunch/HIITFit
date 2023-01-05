@@ -11,19 +11,19 @@ struct WelcomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                HeaderView(titleText: "Welcome")
+                HeaderView(titleText: NSLocalizedString("Welcome", comment: "Greeting"))
                 Spacer()
                 Button {
                     
                 } label: {
-                    Text("History")
+                    Text(NSLocalizedString("History", comment: "View user activity"))
                 }
                 .padding(.bottom)
             }
             VStack {
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading) {
-                        Text("Get fit")
+                        Text(NSLocalizedString("Get Fit", comment: "Invitation to exercise"))
                             .font(.largeTitle)
                         Text("with high intensity interval training")
                             .font(.headline)
@@ -35,7 +35,7 @@ struct WelcomeView: View {
                 Button {
                     
                 } label: {
-                    Text("Get Started")
+                    Text(NSLocalizedString("Get Started", comment: "Invitation"))
                     Image(systemName: "arrow.right.circle")
                 }
                 .font(.title2)

@@ -10,14 +10,26 @@ import Foundation
 struct Exercise {
     let exerciseName: String
     let videoName: String
-    enum ExerciseEnum: String {
-        case squat = "Squat"
-        case stepUp = "Step Up"
-        case burpee = "Burpee"
-        case sunSalute = "Sun Salute"
+    enum ExerciseEnum: CustomStringConvertible {
+        case squat
+        case stepUp
+        case burpee
+        case sunSalute
+        var description: String {
+            switch self {
+                case .squat:
+                    return NSLocalizedString("Squat", comment: "Exercise")
+                case .stepUp:
+                    return NSLocalizedString("Step Up", comment: "Exercise")
+                case .burpee:
+                    return NSLocalizedString("Burpee", comment: "Exercise")
+                case .sunSalute:
+                    return NSLocalizedString("Sun Salute", comment: "Yoga stretch")
+            }
+        }
     }
 }
 
 extension Exercise {
-    static let exercises: [Self] = [.init(exerciseName: ExerciseEnum.squat.rawValue, videoName: "Squat"), .init(exerciseName: ExerciseEnum.stepUp.rawValue, videoName: "StepUp"), .init(exerciseName: ExerciseEnum.burpee.rawValue, videoName: "Burpee"), .init(exerciseName: ExerciseEnum.sunSalute.rawValue, videoName: "SunSalute")]
+    static let exercises: [Self] = [.init(exerciseName: .init(describing: ExerciseEnum.squat), videoName: "Squat"), .init(exerciseName: .init(describing: ExerciseEnum.stepUp), videoName: "StepUp"), .init(exerciseName: .init(describing: ExerciseEnum.burpee), videoName: "Burpee"), .init(exerciseName: .init(describing: ExerciseEnum.sunSalute), videoName: "SunSalute")]
 }
