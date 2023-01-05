@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RatingView: View {
+    @Binding var rating: Int
     var body: some View {
         HStack {
             ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
@@ -21,7 +22,7 @@ struct RatingView: View {
 
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
-        RatingView()
+        RatingView(rating: .constant(3))
             .previewLayout(.sizeThatFits)
     }
 }
