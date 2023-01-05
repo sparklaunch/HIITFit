@@ -9,11 +9,18 @@ import SwiftUI
 
 struct RatingView: View {
     let exerciseIndex: Int
-    @AppStorage("ratings") private var ratings = "4000"
+    @AppStorage("ratings") private var ratings = ""
     @State private var rating = 0
     let maximumRating = 5
     let onColor: Color = .red
     let offColor: Color = .gray
+    init(exerciseIndex: Int) {
+        self.exerciseIndex = exerciseIndex
+        let desiredLength = Exercise.exercises.count
+        if ratings.count < desiredLength {
+            ratings = ratings.padding(toLength: desiredLength, withPad: "0", startingAt: .zero)
+        }
+    }
     var body: some View {
         HStack {
             ForEach(1 ..< maximumRating + 1) { index in
