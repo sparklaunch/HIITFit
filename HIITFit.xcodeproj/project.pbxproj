@@ -20,6 +20,7 @@
 		3D6F962529655E0300FEFBF8 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F962429655E0300FEFBF8 /* Exercise.swift */; };
 		3D6F96282965617500FEFBF8 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F96272965617500FEFBF8 /* HistoryStore.swift */; };
 		3D6F962A296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F9629296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift */; };
+		3D6F962D296655D700FEFBF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D6F962F296655D700FEFBF8 /* Localizable.strings */; };
 		9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB122964AEB00006C850 /* HIITFitApp.swift */; };
 		9036BB152964AEB00006C850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB142964AEB00006C850 /* ContentView.swift */; };
 		9036BB172964AEB10006C850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB162964AEB10006C850 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		3D6F962429655E0300FEFBF8 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		3D6F96272965617500FEFBF8 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 		3D6F9629296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevelopmentData.swift; sourceTree = "<group>"; };
+		3D6F962E296655D700FEFBF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9036BB0F2964AEB00006C850 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9036BB122964AEB00006C850 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		9036BB142964AEB00006C850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				9036BB162964AEB10006C850 /* Assets.xcassets */,
 				9036BB182964AEB10006C850 /* HIITFit.entitlements */,
 				9036BB192964AEB10006C850 /* Preview Content */,
+				3D6F962F296655D700FEFBF8 /* Localizable.strings */,
 			);
 			path = HIITFit;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				3D6F96182964FD7900FEFBF8 /* SunSalute.mp4 in Resources */,
 				3D6F96172964FD7900FEFBF8 /* Burpee.mp4 in Resources */,
 				9036BB1B2964AEB10006C850 /* Preview Assets.xcassets in Resources */,
+				3D6F962D296655D700FEFBF8 /* Localizable.strings in Resources */,
 				9036BB172964AEB10006C850 /* Assets.xcassets in Resources */,
 				3D6F96162964FD7900FEFBF8 /* Squat.mp4 in Resources */,
 				3D6F96152964FD7900FEFBF8 /* StepUp.mp4 in Resources */,
@@ -237,6 +241,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D6F962F296655D700FEFBF8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D6F962E296655D700FEFBF8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9036BB1C2964AEB10006C850 /* Debug */ = {
