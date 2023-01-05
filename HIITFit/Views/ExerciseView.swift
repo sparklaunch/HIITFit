@@ -9,6 +9,10 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
+    @Binding var selectedTab: Int
+    var lastExercise: Bool {
+        index + 1 == Exercise.exercises.count
+    }
     let index: Int
     let interval: TimeInterval = 30
     var body: some View {
@@ -25,8 +29,17 @@ struct ExerciseView: View {
                 }
                 Text(Date().addingTimeInterval(interval), style: .timer)
                     .font(.system(size: 90))
-                Button(NSLocalizedString("Start/Done", comment: "Begin exercise / Mark as finished")) {
-                    
+                HStack(spacing: 150) {
+                    Button {
+                        
+                    } label: {
+                        Text("Start Exercise")
+                    }
+                    Button {
+                        selectedTab = lastExercise ? 9 : selectedTab + 1
+                    } label: {
+                        Text("Done")
+                    }
                 }
                 .font(.title3)
                 .padding()
@@ -44,6 +57,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(index: .zero)
+        ExerciseView(selectedTab: .constant(1), index: .zero)
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @Binding var selectedTab: Int
     var body: some View {
         ZStack {
             VStack {
@@ -33,7 +34,7 @@ struct WelcomeView: View {
                         .clipShape(Circle())
                 }
                 Button {
-                    
+                    selectedTab = .zero
                 } label: {
                     Text(NSLocalizedString("Get Started", comment: "Invitation"))
                     Image(systemName: "arrow.right.circle")
@@ -51,6 +52,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(selectedTab: .constant(9))
     }
 }
