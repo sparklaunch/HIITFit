@@ -21,6 +21,12 @@ struct RatingView: View {
             ratings = ratings.padding(toLength: desiredLength, withPad: "0", startingAt: .zero)
         }
     }
+    fileprivate func convertRating() {
+        let index = ratings.index(ratings.startIndex, offsetBy: exerciseIndex)
+        let character = ratings[index]
+        rating = character.wholeNumberValue ?? .zero
+    }
+    
     var body: some View {
         HStack {
             ForEach(1 ..< maximumRating + 1) { index in
@@ -30,9 +36,10 @@ struct RatingView: View {
                         updateRating(index: index)
                     }
                     .onAppear {
-                        let index = ratings.index(ratings.startIndex, offsetBy: exerciseIndex)
-                        let character = ratings[index]
-                        rating = character.wholeNumberValue ?? .zero
+                        convertRating()
+                    }
+                    .onChange(of: ratings) { _ in
+                        convertRating()
                     }
             }
         }
