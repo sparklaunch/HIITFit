@@ -16,9 +16,9 @@ struct ExerciseDay: Identifiable {
 class HistoryStore: ObservableObject {
     @Published var exerciseDays: [ExerciseDay] = []
     init() {
-#if DEBUG
-        createDevelopmentData()
-#endif
+//#if DEBUG
+//        createDevelopmentData()
+//#endif
     }
     /// Add a finished exercise into the store.
     ///   - parameters:
