@@ -41,14 +41,11 @@ struct WelcomeView: View {
                     selectedTab = .zero
                 } label: {
                     Text(NSLocalizedString("Get Started", comment: "Invitation"))
+                        .raisedButtonTextStyle()
                     Image(systemName: "arrow.right.circle")
                 }
-                .font(.title2)
+                .buttonStyle(RaisedButtonStyle())
                 .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(.gray, lineWidth: 2)
-                )
             }
         }
     }
