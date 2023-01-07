@@ -28,6 +28,9 @@
 		9036BB1B2964AEB10006C850 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9036BB1A2964AEB10006C850 /* Preview Assets.xcassets */; };
 		9036BB222964B84B0006C850 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB212964B84B0006C850 /* WelcomeView.swift */; };
 		9036BB242964B8540006C850 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB232964B8540006C850 /* ExerciseView.swift */; };
+		9036BB28296A21280006C850 /* RaisedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB27296A21280006C850 /* RaisedButton.swift */; };
+		9036BB2A296A22340006C850 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB29296A22340006C850 /* TextExtension.swift */; };
+		9036BB2C296A22EB0006C850 /* RaisedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB2B296A22EB0006C850 /* RaisedButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		9036BB1A2964AEB10006C850 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9036BB212964B84B0006C850 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9036BB232964B8540006C850 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		9036BB27296A21280006C850 /* RaisedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButton.swift; sourceTree = "<group>"; };
+		9036BB29296A22340006C850 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		9036BB2B296A22EB0006C850 /* RaisedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 			children = (
 				3D6F961D2965264800FEFBF8 /* DateExtension.swift */,
 				3D6F9620296539EE00FEFBF8 /* ImageExtension.swift */,
+				9036BB29296A22340006C850 /* TextExtension.swift */,
+				9036BB2B296A22EB0006C850 /* RaisedButtonStyle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -117,6 +125,7 @@
 		9036BB112964AEB00006C850 /* HIITFit */ = {
 			isa = PBXGroup;
 			children = (
+				9036BB26296A211B0006C850 /* Components */,
 				3D6F963F2967A20000FEFBF8 /* Info.plist */,
 				3D6F96262965615C00FEFBF8 /* Models */,
 				3D6F961F2965275500FEFBF8 /* Utils */,
@@ -153,6 +162,14 @@
 				3D6F963D2966A86C00FEFBF8 /* TimerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9036BB26296A211B0006C850 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9036BB27296A21280006C850 /* RaisedButton.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9036BB2A296A22340006C850 /* TextExtension.swift in Sources */,
 				3D6F963E2966A86C00FEFBF8 /* TimerView.swift in Sources */,
 				3D6F962A296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift in Sources */,
 				3D6F961C2965243100FEFBF8 /* HistoryView.swift in Sources */,
@@ -241,7 +259,9 @@
 				9036BB242964B8540006C850 /* ExerciseView.swift in Sources */,
 				9036BB152964AEB00006C850 /* ContentView.swift in Sources */,
 				3D6F962529655E0300FEFBF8 /* Exercise.swift in Sources */,
+				9036BB2C296A22EB0006C850 /* RaisedButtonStyle.swift in Sources */,
 				3D6F961A2965042E00FEFBF8 /* RatingView.swift in Sources */,
+				9036BB28296A21280006C850 /* RaisedButton.swift in Sources */,
 				9036BB222964B84B0006C850 /* WelcomeView.swift in Sources */,
 				3D6F9621296539EE00FEFBF8 /* ImageExtension.swift in Sources */,
 				9036BB132964AEB00006C850 /* HIITFitApp.swift in Sources */,
