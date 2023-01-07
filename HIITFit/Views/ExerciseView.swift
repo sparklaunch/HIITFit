@@ -19,6 +19,11 @@ struct ExerciseView: View {
     let index: Int
     @State private var timerDone = false
     @State private var showTimer = false
+    var startExerciseButton: some View {
+        RaisedButton(buttonText: "Start Exercise") {
+            showTimer.toggle()
+        }
+    }
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -32,11 +37,7 @@ struct ExerciseView: View {
                         .foregroundColor(.red)
                 }
                 HStack(spacing: 150) {
-                    Button {
-                        showTimer.toggle()
-                    } label: {
-                        Text("Start Exercise")
-                    }
+                    startExerciseButton
                     Button {
                         historyStore.addDoneExercise(Exercise.exercises[index].exerciseName)
                         timerDone = false
