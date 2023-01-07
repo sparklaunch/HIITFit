@@ -34,6 +34,7 @@
 		9036BB2E296A27ED0006C850 /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB2D296A27ED0006C850 /* EmbossedButton.swift */; };
 		9036BB30296A28870006C850 /* EmbossedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB2F296A28870006C850 /* EmbossedButtonStyle.swift */; };
 		9036BB32296A2E050006C850 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB31296A2E050006C850 /* ContainerView.swift */; };
+		9036BB34296A30B20006C850 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB33296A30B20006C850 /* GradientBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		9036BB2D296A27ED0006C850 /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
 		9036BB2F296A28870006C850 /* EmbossedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButtonStyle.swift; sourceTree = "<group>"; };
 		9036BB31296A2E050006C850 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		9036BB33296A30B20006C850 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				9036BB27296A21280006C850 /* RaisedButton.swift */,
 				9036BB2D296A27ED0006C850 /* EmbossedButton.swift */,
+				9036BB33296A30B20006C850 /* GradientBackground.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				3D6F963E2966A86C00FEFBF8 /* TimerView.swift in Sources */,
 				3D6F962A296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift in Sources */,
 				3D6F961C2965243100FEFBF8 /* HistoryView.swift in Sources */,
+				9036BB34296A30B20006C850 /* GradientBackground.swift in Sources */,
 				3D6F961E2965264800FEFBF8 /* DateExtension.swift in Sources */,
 				3D6F962329653E8E00FEFBF8 /* SuccessView.swift in Sources */,
 				3D6F960F2964F8F500FEFBF8 /* HeaderView.swift in Sources */,
