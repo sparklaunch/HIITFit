@@ -33,6 +33,7 @@
 		9036BB2C296A22EB0006C850 /* RaisedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB2B296A22EB0006C850 /* RaisedButtonStyle.swift */; };
 		9036BB2E296A27ED0006C850 /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB2D296A27ED0006C850 /* EmbossedButton.swift */; };
 		9036BB30296A28870006C850 /* EmbossedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB2F296A28870006C850 /* EmbossedButtonStyle.swift */; };
+		9036BB32296A2E050006C850 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036BB31296A2E050006C850 /* ContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		9036BB2B296A22EB0006C850 /* RaisedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButtonStyle.swift; sourceTree = "<group>"; };
 		9036BB2D296A27ED0006C850 /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
 		9036BB2F296A28870006C850 /* EmbossedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButtonStyle.swift; sourceTree = "<group>"; };
+		9036BB31296A2E050006C850 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				3D6F961B2965243100FEFBF8 /* HistoryView.swift */,
 				3D6F962229653E8E00FEFBF8 /* SuccessView.swift */,
 				3D6F963D2966A86C00FEFBF8 /* TimerView.swift */,
+				9036BB31296A2E050006C850 /* ContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9036BB32296A2E050006C850 /* ContainerView.swift in Sources */,
 				9036BB2A296A22340006C850 /* TextExtension.swift in Sources */,
 				3D6F963E2966A86C00FEFBF8 /* TimerView.swift in Sources */,
 				3D6F962A296566D100FEFBF8 /* HistoryStoreDevelopmentData.swift in Sources */,
