@@ -10,6 +10,8 @@ import SwiftUI
 struct RaisedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .background(.red)
+            .frame(maxWidth: .infinity)
+            .padding([.top, .bottom], 12)
+            .background(Capsule())
     }
 }

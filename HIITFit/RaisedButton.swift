@@ -22,6 +22,7 @@ struct RaisedButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             RaisedButton()
+                .buttonStyle(RaisedButtonStyle())
                 .padding(20)
         }
         .background(.gray)
