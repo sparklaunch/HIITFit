@@ -16,20 +16,26 @@ struct WelcomeView: View {
         }
         .padding()
     }
+    var historyButton: some View {
+        Button {
+            showHistory = true
+        } label: {
+            Text("History")
+                .fontWeight(.bold)
+                .padding([.leading, .trailing], 5)
+        }
+        .padding(.bottom, 10)
+        .buttonStyle(EmbossedButtonStyle())
+    }
     var body: some View {
         ZStack {
             VStack {
                 HeaderView(selectedTab: $selectedTab, titleText: NSLocalizedString("Welcome", comment: "Greeting"))
                 Spacer()
-                Button {
-                    showHistory.toggle()
-                } label: {
-                    Text(NSLocalizedString("History", comment: "View user activity"))
-                }
-                .padding(.bottom)
-                .sheet(isPresented: $showHistory) {
-                    HistoryView(showHistory: $showHistory)
-                }
+                historyButton
+                    .sheet(isPresented: $showHistory) {
+                        HistoryView(showHistory: $showHistory)
+                    }
             }
             VStack {
                 HStack(alignment: .bottom) {
